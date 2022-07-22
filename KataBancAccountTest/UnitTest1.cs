@@ -30,5 +30,19 @@ namespace KataBancAccountTest
             //Assert
             Assert.That(result, Is.EqualTo(expected));
         }
+        [Test]
+        public void Given_An_Amount_To_Withdraw_Return_Balance()
+        {
+            //Arrange
+            int deposit1 = 500;
+            int withdraw = 300;
+            int expected = 200;
+            BankAccount account = new BankAccount();
+            //Act
+            int result = account.Deposit(deposit1);
+            result = account.Withdraw(withdraw);
+            //Assert
+            Assert.That(result, Is.EqualTo(expected));
+        }
     }
 }

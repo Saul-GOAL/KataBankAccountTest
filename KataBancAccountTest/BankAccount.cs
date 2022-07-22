@@ -8,5 +8,11 @@
            balance += deposit;
             return balance;
         }
+
+        internal int Withdraw(int withdraw)
+        {
+            balance -= withdraw;
+            return balance; ;
+        }
     }
 }
