@@ -11,7 +11,8 @@
 
         internal int Withdraw(int withdraw)
         {
-            balance -= withdraw;
+            if(withdraw < balance)
+                balance -= withdraw;
             return balance; ;
         }
     }
