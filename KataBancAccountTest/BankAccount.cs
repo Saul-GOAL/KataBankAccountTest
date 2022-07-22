@@ -2,18 +2,21 @@
 {
     public class BankAccount
     {
-        int balance = 0;
-        public int Deposit(int deposit)
+        private int _balance;
+        public int Balance
         {
-           balance += deposit;
-            return balance;
+            get { return _balance; }
+            set { _balance = value; }
+        }
+        public void Deposit(int deposit)
+        {
+           Balance += deposit;
         }
 
-        internal int Withdraw(int withdraw)
+        public void Withdraw(int withdraw)
         {
-            if(withdraw < balance)
-                balance -= withdraw;
-            return balance; ;
+            if(withdraw < Balance)
+                Balance -= withdraw;
         }
     }
 }

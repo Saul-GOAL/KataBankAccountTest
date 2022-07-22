@@ -11,7 +11,8 @@ namespace KataBancAccountTest
             BankAccount account = new BankAccount();
 
             //Act
-            int result = account.Deposit(deposit);
+            account.Deposit(deposit);
+            int result = account.Balance;
             //Assert
             Assert.That(result, Is.EqualTo(expected));
         }
@@ -25,8 +26,9 @@ namespace KataBancAccountTest
             BankAccount account = new BankAccount();
 
             //Act
-            int result = account.Deposit(deposit1);
-            result = account.Deposit(deposit2);
+            account.Deposit(deposit1);
+            account.Deposit(deposit2);
+            int result = account.Balance;
             //Assert
             Assert.That(result, Is.EqualTo(expected));
         }
@@ -39,8 +41,9 @@ namespace KataBancAccountTest
             int expected = 200;
             BankAccount account = new BankAccount();
             //Act
-            int result = account.Deposit(deposit1);
-            result = account.Withdraw(withdraw);
+            account.Deposit(deposit1);
+            account.Withdraw(withdraw);
+            int result = account.Balance;
             //Assert
             Assert.That(result, Is.EqualTo(expected));
         }
@@ -53,8 +56,9 @@ namespace KataBancAccountTest
             int expected = 300;
             BankAccount account = new BankAccount();
             //Act
-            int result = account.Deposit(deposit1);
-            result = account.Withdraw(withdraw);
+            account.Deposit(deposit1);
+            account.Withdraw(withdraw);
+            int result = account.Balance;
             //Assert
             Assert.That(result, Is.EqualTo(expected));
         }
